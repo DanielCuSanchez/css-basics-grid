@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  display: grid;
+  /* Fracciones como unidades de medida 1fr */
+  /* grid-template: 300px 100px 100px / repeat(4, 1fr); */
+  /* Sin comas */
+  grid-template: 300px 100px 100px / minmax(300px, 1fr) 1fr 1fr 1fr;
+  /* grid-column-gap: 30px;
+  grid-row-gap: 10px; */
+  row-gap: 10px;
+  column-gap: 30px;
+}
+.item {
+  background-color: rgb(98, 14, 177);
+  color: white;
+  border: 1px solid black;
+}
+.item:nth-of-type(4) {
+  background-color: aquamarine;
+  overflow: auto;
+  display: grid;
+  grid-template: 50px 50px 50px / 20% 50% 30%;
+}
+.item .item {
+  background-color: brown;
+  overflow: hidden;
+}
